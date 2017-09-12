@@ -8,7 +8,9 @@ Output = sys.argv[3]
 # working_files_path = "/Users/schuyler/Dropbox/Scripts/Resistance_Class_Parsing"
 # Output = "/Users/schuyler/SS/test/out.out"
 
+iteration = 0
 for line in open(Input):
+    iteration += 1
     line = line.rstrip().strip('\"')
     try:
         dat = line.split()[1]
@@ -39,7 +41,8 @@ for line in open(Input):
         megout = open('%s/%s.blast' %(Output, AB_C), 'a+')
         megout.write(line + '\n')
     else:
-        out = "no database info found"
+        print "No DataBase Info Found for line %s in Input File" %(iteration)
+        out = open('%s/Not_Parsed.txt' %Output,'a+')
 
     out.write(line + '\n')
 
