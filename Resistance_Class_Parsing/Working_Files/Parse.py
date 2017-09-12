@@ -38,6 +38,8 @@ for line in open(Input):
         out = open('%s/Megares/%s/%s.blast'  %(Output, AB_C, gene), 'a+')
         megout = open('%s/%s.blast' %(Output, AB_C), 'a+')
         megout.write(line + '\n')
+    else:
+        out = "no database info found"
 
     out.write(line + '\n')
 
