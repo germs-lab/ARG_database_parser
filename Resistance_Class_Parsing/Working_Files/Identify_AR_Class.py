@@ -7,13 +7,13 @@ if mp.cpu_count <= 2:
 else:
     cores = 1 + mp.cpu_count()//2
 
-# Input = sys.argv[1]
-# working_files_path = sys.argv[2]
-# Output = sys.argv[3]
+Input = sys.argv[1]
+working_files_path = sys.argv[2]
+Output = sys.argv[3]
 
-Input = "/Users/schuyler/SS/test/input.txt"
-working_files_path = "/Users/schuyler/Dropbox/Scripts/Resistance_Class_Parsing"
-Output = "/Users/schuyler/SS/test/out"
+# Input = "/Users/schuyler/SS/test/input.txt"
+# working_files_path = "/Users/schuyler/Dropbox/Scripts/Resistance_Class_Parsing"
+# Output = "/Users/schuyler/SS/test/out"
 out = open('%s/All.list'  %(Output), 'a+')
 
 def ARG_ID(line):
